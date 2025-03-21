@@ -69,32 +69,22 @@
 //     cin>>num2;
 //     cout<<"Enter the operator (+,-,*,/,%) : ";
 //     cin>>op;
-//     if (op == '+')
-//     sub = 0;
-//     else if (op == '-')
-//     sub = 1;
-//     else if (op == '*')
-//     sub = 2;
-//     else if (op == '/')
-//     sub = 3;
-//     else if (op == '%')
-//     sub = 4;
     
-//     switch (sub)
+//     switch (op)
 //     {
-//     case 0:
+//     case '+':
 //     cout<<"Sum of "<<num1<<" and "<<num2<<" is :"<<num1+num2<<endl;
 //     break;
-//     case 1:
+//     case '-':
 //     cout<<"Difference of "<<num2<<" from "<<num1<<" is :"<<num1-num2<<endl;
 //     break;
-//     case 2:
+//     case '*':
 //     cout<<"Product of "<<num1<<" and "<<num2<<" is :"<<num1*num2<<endl;
 //     break;
-//     case 3:
+//     case '/':
 //     cout<<"Division of "<<num1<<" and "<<num2<<" will give :"<<num1/num2<<endl;
 //     break;
-//     case 4:
+//     case '%':
 //     cout<<"Modulus of "<<num1<<" from "<<num2<<" will give :"<<num1%num2<<endl;
 //     break;
 //     default :
