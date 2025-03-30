@@ -13,7 +13,7 @@ public:
         *cgpaPtr = cgpa;
     }
 
-    ~Student(){
+    ~Student(){  // destructor
         cout<<"Hii I am destructor!!!\n";
         delete cgpaPtr;
     }
