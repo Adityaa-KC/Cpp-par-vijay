@@ -20,7 +20,7 @@ public:
     }
     
     void getInfo(){
-        cout<<"\n__________________________________________"<<endl;
+        cout<<"\n_____________________________________________"<<endl;
         cout<<"Name of the student :"<<name<<endl;
         cout<<"Course of the student :"<<course<<endl;
         cout<<"Roll no. of the student :"<<rollno<<endl;
@@ -75,7 +75,7 @@ int main() {
     for (int i = 0;i<n;i++)
         students[i]->getInfo();
  
-    cout<<"\nThe topper student details are :\n";
+    cout<<"\nThe topper student details are :";
     students[topperIndex]->getInfo();
 
     for (int i=0;i<n;i++)
