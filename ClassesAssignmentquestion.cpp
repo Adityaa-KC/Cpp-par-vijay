@@ -6,6 +6,10 @@ class Bank{
         double Accountnum,Balance,depoAmt,withdrawAmt;
 
     public :
+        Bank(){
+            cout<<"\nWelcome to AKC bankings ltd. \n"<<endl;
+        }
+
         void set_val()
         {
             cout<<"Enter the name of customer :";
@@ -45,7 +49,7 @@ class Bank{
         }
 
         void withdraw_amt(){
-            cout<<"\n Enter the amount you want to withdraw :";
+            cout<<"\nEnter the amount you want to withdraw :";
             cin>>withdrawAmt;
             cout<<endl;
             if (withdrawAmt>Balance)
@@ -57,6 +61,10 @@ class Bank{
                 Balance -= withdrawAmt;
                 cout<<"Balance in Account after withdrawing money is :"<<Balance<<endl;
             }
+        }
+
+        ~Bank(){
+            cout<<"\nThank you for visiting ";
         }
 };
 
@@ -89,7 +97,7 @@ int main(){
             break;
         case 4 :
             cout<<endl;
-            cout<<"Quitting ....";
+            cout<<"Quitting ...."<<endl;
             return 0;
         default :
             cout<<"Enter a valid input !!!"<<endl;
