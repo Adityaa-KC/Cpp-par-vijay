@@ -1,13 +1,14 @@
 #include<iostream>
+#include <iomanip>
 using namespace std;
 class Bank{
     private:
-        string Name,AccType;
-        double Accountnum,Balance,depoAmt,withdrawAmt;
+        string Name,AccType,Accountnum;
+        double Balance;
 
     public :
         Bank(){
-            cout<<"\nWelcome to AKC bankings ltd. \n"<<endl;
+            cout<<"Welcome to AKC bankings ltd. \n"<<endl;
         }
 
         void set_val();
@@ -16,7 +17,7 @@ class Bank{
         void withdraw_amt();
 
         ~Bank(){
-            cout<<"\nThank you for visiting ";
+            cout<<"\nThank you for visiting "<<Name<<" !!";
         }
 };
 
@@ -38,11 +39,13 @@ void Bank :: get_info()
     cout << "-----------------------------"<<endl;
     cout<<"Details of the customer is :"<<endl;
     cout<<"Name of customer :"<<Name<<endl;
-    cout<<"Balance in Account :"<<Balance<<endl;
-}
+    cout<<"Type of Account :"<<AccType<<endl;
+    cout<<"Account Number :"<<Accountnum<<endl;
+    cout << fixed << setprecision(2) << "Balance: " << Balance << "$" << endl;}
 
 void Bank :: depo_amt()
 {
+    double depoAmt;
     cout<<"\nEnter the amount you want to deposit :";
     cin>>depoAmt;
     cout<<endl;
@@ -53,12 +56,13 @@ void Bank :: depo_amt()
     else
     {
         Balance += depoAmt;
-        cout<<"Balance in Account after updating is :"<<Balance<<endl;
+        cout<<"Balance in Account after updating is :"<<Balance<<"$"<<endl;
     }
 }
 
 void Bank :: withdraw_amt()
 {
+    double withdrawAmt;
     cout<<"\nEnter the amount you want to withdraw :";
     cin>>withdrawAmt;
     cout<<endl;
@@ -73,12 +77,11 @@ void Bank :: withdraw_amt()
     else 
     {
         Balance -= withdrawAmt;
-        cout<<"Balance in Account after withdrawing money is :"<<Balance<<endl;
+        cout<<"Balance in Account after withdrawing money is :"<<Balance<<"$"<<endl;
     }
 }
 
-int main(){
-    Bank c1;
+void get_Menu(Bank &c1){
     c1.set_val();
     while (true)
     {
@@ -106,10 +109,16 @@ int main(){
             break;
         case 4 :
             cout<<"Quitting ...."<<endl;
-            return 0;
+            return;
         default :
             cout<<"Enter a valid input !!!"<<endl;
         }
         
     } 
+}
+
+int main(){
+    Bank c2;
+    get_Menu(c2);
+    return 0;
 }
