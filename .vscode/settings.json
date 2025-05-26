@@ -4,7 +4,8 @@
         "ostream": "cpp",
         "*.tcc": "cpp",
         "iomanip": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "sstream": "cpp"
     },
     "code-runner.clearPreviousOutput": true
 }
