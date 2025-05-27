@@ -9,10 +9,7 @@
 
 class SET:
     def is_member(self,n,set1):
-        for i in range(len(set1)):
-            if set1[i] == n :
-                return True
-        return False
+        return n in set1
     
     def powerSet(self,set1):
         if not set1:
@@ -57,6 +54,8 @@ def main():
     set0 = {1,2,3,4,6,4,3,4}
     set1 = {1,2,3,4,5}
     set2 = list(set0)
+    if(s1.is_member(1,set1)):
+        print("Yes it is present")
     # result = s1.powerSet(set2)
     # print(result)
     # s1.is_subset(set1,set0)
